@@ -51,8 +51,7 @@ function StudentList() {
           <tbody>
             {data[0].name &&
               data.map((oneStudent: StudentData) => (
-                // eslint-disable-next-line react/jsx-key
-                <StudentRow student={oneStudent} />
+                <StudentRow key={oneStudent.name} student={oneStudent} />
               ))}
           </tbody>
         </Table>
