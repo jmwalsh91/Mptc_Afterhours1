@@ -1,4 +1,6 @@
+import { Dialog } from '@mantine/core'
 import { StudentData } from '~/services/sb'
+import StudentDialog from './StudentDialog'
 
 type Props = {
   student: StudentData
@@ -7,7 +9,9 @@ type Props = {
 function StudentRow({ student }: Props) {
   return (
     <tr key={student.name}>
-      <td>{student.name}</td>
+      <td>
+        {student.name} <StudentDialog student={student} />{' '}
+      </td>
       <td>{student.app_submitted.toString()}</td>
       <td>{student.app_approved}</td>
       <td>{student.mtg_sched.toString()}</td>
