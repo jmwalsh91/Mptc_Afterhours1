@@ -1,6 +1,6 @@
-import { Dialog } from '@mantine/core'
-import { StudentData } from '~/services/sb'
 import StudentDialog from './StudentDialog'
+
+import { StudentData } from '~/services/sb'
 
 type Props = {
   student: StudentData
